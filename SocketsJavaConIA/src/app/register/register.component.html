@@ -1,0 +1,38 @@
+<div class="container mt-5">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+        <h3>Registro</h3>
+        </div>
+        <div class="card-body">
+        <form (ngSubmit)="register()">
+            <!-- Nombre de Usuario -->
+            <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username" name="username"  [(ngModel)]="username" placeholder="Ingrese su nombre de usuario" required>
+            </div>
+            <!-- Correo Electrónico -->
+            <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email"  [(ngModel)]="email" placeholder="Ingrese su correo electrónico" required>
+            </div>
+            <!-- Contraseña -->
+            <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password"  [(ngModel)]="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <!-- Botón de Registro -->
+            <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <a  routerLink="/loggin">¿Ya tienes una cuenta? Inicia sesión</a>
+    </div>
+    </div>
+</div>
+</div>
+<router-outlet></router-outlet>
